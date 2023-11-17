@@ -18,6 +18,14 @@ intervalCount(function() {
 
 function intervalCount(cb, delay, amount) {
   // Your code here
+
+  const intervalId = setInterval(() => {
+    cb();
+
+    if (--amount === 0) {
+      clearInterval(intervalId);
+    }
+  }, 1000);
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

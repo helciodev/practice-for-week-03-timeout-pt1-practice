@@ -23,9 +23,15 @@ setSecondsTimeoutArgs(function(arg1, arg2) {
 ***********************************************************************/
 
 function setSecondsTimeoutArgs(cb, delayInSeconds, ...args) {
-  // Your code here
+  const time = delayInSeconds * 1000;
+  console.log(...args);
+  return setTimeout(cb, time, ...args);
 }
 
+function printSum(num1, num2, num3) {
+  console.log(num1 + num2 + num3);
+}
+setSecondsTimeoutArgs(printSum, 0.25, 5, 1, 4); // should print '10' after 250ms
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = setSecondsTimeoutArgs;

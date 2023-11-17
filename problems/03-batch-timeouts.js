@@ -34,6 +34,7 @@ console.log(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} ]
 
 function batchTimeouts(callbacks, delays) {
   // Your code here
+  return callbacks.map((cb, i) => setTimeout(cb, delays[i]));
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
