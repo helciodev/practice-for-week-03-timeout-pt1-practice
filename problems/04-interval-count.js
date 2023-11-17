@@ -25,7 +25,7 @@ function intervalCount(cb, delay, amount) {
     if (--amount === 0) {
       clearInterval(intervalId);
     }
-  }, 1000);
+  }, delay);
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
